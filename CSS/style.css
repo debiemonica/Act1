@@ -1,0 +1,139 @@
+ *{
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #eef2f3;  
+  color: violet;
+  line-height: 1.6;
+}
+
+
+.site-header {
+  background-color: violet;  
+  color: black;
+  padding: 20px;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background: black;
+  border: 1px solid violet;
+  border-radius: 8px;
+}
+
+
+.profile-card {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 2px solid violet;
+  border-radius: 10px;
+  background: black;
+}
+
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  display: block;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  border: 3px solid violet;
+}
+
+
+.status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #28a745;  
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+}
+
+
+.profile-card h1 {
+  margin-bottom: 10px;
+
+  position: relative;
+  top: 0;
+}
+
+.title {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+.section {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: black;
+  border: 1px solid violet;
+  border-radius: 8px;
+}
+
+
+.section h3 {
+  background: violet;
+  color: black;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border-color: violet;
+}
+
+
+ul {
+  list-style: disc inside;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.skill-list span {
+  background: violet
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+
+.contact p {
+  margin: 5px 0;
+}
+
+.contact a {
+  color: violet;
+  text-decoration: none;
+  font-weight: bold;
+}
