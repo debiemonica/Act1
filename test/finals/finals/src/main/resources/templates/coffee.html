@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>List of Coffees</title>
+</head>
+<body>
+<h2>List of Coffees</h2>
+<a th:href="@{/coffees/new}">Add New Coffee</a>
+<table border="1">
+    <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Origin</th>
+        <th>Roast Level</th>
+        <th>Flavor Notes</th>
+        <th>Price</th>
+        <th>Action</th>
+    </tr>
+    <tr th:each="coffee, iterStat : ${coffees}">
+        <td th:text="${iterStat.count}"></td>
+        <td th:text="${coffee.name}"></td>
+        <td th:text="${coffee.origin}"></td>
+        <td th:text="${coffee.roastLevel}"></td>
+        <td th:text="${coffee.flavorNotes}"></td>
+        <td th:text="${coffee.price}"></td>
+        <td>
+            <a th:href="@{'/coffees/delete/' + ${coffee.id}}">Delete</a>
+        </td>
+    </tr>
+</table>
+<a th:href="@{/logout}">Logout</a>
+</body>
+</html>
