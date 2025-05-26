@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --font-sans: 'Roboto', system-ui, sans-serif;
+
+    /* Soft Pink-Inspired Color Palette */
+    --color-bg: #4B2E3B;               /* Deep mauve background */
+    --color-surface: #FDEEF9;          /* Light blush pink form background */
+    --color-primary: #D36CA0;          /* Medium pink */
+    --color-primary-hover: #B85085;    /* Darker rose */
+    --color-text: #3E1E2E;             /* Dark mauve text */
+    --color-muted: #E4A1C0;            /* Soft pastel pink */
+    --color-border: #E9C7D8;           /* Light pink border */
+
+    --border-radius: 0.75rem;
+    --box-shadow: 0 8px 20px rgba(75, 46, 59, 0.3);
+    --transition: all 0.3s ease-in-out;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    background-image: url('/images/pink-background.jpg'); /* Replace with a pink-themed background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(75, 46, 59, 0.6); /* mauve tint */
+    z-index: -1;
+}
+
+.welcome {
+    background-color: rgba(211, 108, 160, 0.85); /* primary pink w/ opacity */
+    color: #fff;
+    padding: 2rem 3rem;
+    border-radius: var(--border-radius);
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: var(--box-shadow);
+    animation: fadeIn 1s ease-out;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+form {
+    background-color: var(--color-surface);
+    padding: 2.5rem 2.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    width: 90%;
+    max-width: 450px;
+    animation: slideIn 0.8s ease-out;
+    transition: var(--transition);
+}
+
+form h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+form > div {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    background-color: #fff0f6;
+    color: var(--color-text);
+    font-size: 1rem;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+input:focus {
+    border-color: var(--color-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(211, 108, 160, 0.3);
+}
+
+button {
+    margin-top: 2rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: var(--transition);
+}
+
+button:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(75, 46, 59, 0.3);
+}
+
+.error-message {
+    color: #e74c3c;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+.input-error {
+    border-color: #e74c3c;
+    background-color: #fdecea;
+}
+
+/* Animations remain unchanged */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
